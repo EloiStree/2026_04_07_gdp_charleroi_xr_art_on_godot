@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://blgamm8aw0dux"]
+
+[ext_resource type="Texture2D" uid="uid://ci2sbe2n4r1i7" path="res://addons/2026_04_07_gdp_charleroi_xr_art_on_godot/stree_eloi/assets/3d/surfing_drone/basic_shape/surfing_game_basic_shape_uv.png" id="1_v83v8"]
+
+[resource]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0, 1, 0, 0.78039217)
+albedo_texture = ExtResource("1_v83v8")

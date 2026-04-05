@@ -1,0 +1,200 @@
+[gd_scene format=3 uid="uid://cwlg1avpp1bdc"]
+
+[ext_resource type="PackedScene" uid="uid://duoiode0eaiio" path="res://addons/2026_04_07_gdp_charleroi_xr_art_on_godot/stree_eloi/assets/3d/surfing_drone/surfer/surfer_rigged.glb" id="1_nl8te"]
+[ext_resource type="Material" uid="uid://y4cubj8ifmo7" path="res://addons/2026_04_07_gdp_charleroi_xr_art_on_godot/stree_eloi/assets/3d/surfing_drone/surfer/mat_surfer_rigged.tres" id="2_ils87"]
+[ext_resource type="PackedScene" uid="uid://b1djxb7qob8t7" path="res://addons/2026_04_07_gdp_charleroi_xr_art_on_godot/stree_eloi/assets/3d/surfing_drone/meca/SurfingMeca.glb" id="3_nmbls"]
+[ext_resource type="Material" uid="uid://dvcjjpsep6ek0" path="res://addons/2026_04_07_gdp_charleroi_xr_art_on_godot/stree_eloi/assets/3d/surfing_drone/meca/mat_cockpit_meca.tres" id="4_t53jj"]
+[ext_resource type="PackedScene" uid="uid://bnlnjgru5owjf" path="res://addons/2026_04_07_gdp_charleroi_xr_art_on_godot/stree_eloi/assets/3d/surfing_drone/drone/surf_drone.glb" id="5_2jrdl"]
+[ext_resource type="Material" uid="uid://bpwahaiyxdwix" path="res://addons/2026_04_07_gdp_charleroi_xr_art_on_godot/stree_eloi/assets/3d/surfing_drone/drone/mat_surf_drone.tres" id="6_38wo7"]
+[ext_resource type="PackedScene" uid="uid://blxwi2jvyytj5" path="res://addons/2026_04_07_gdp_charleroi_xr_art_on_godot/stree_eloi/assets/3d/surfing_drone/basic_shape/surfing_game_basic_shape.glb" id="7_vuwrv"]
+[ext_resource type="Material" uid="uid://blgamm8aw0dux" path="res://addons/2026_04_07_gdp_charleroi_xr_art_on_godot/stree_eloi/assets/3d/surfing_drone/basic_shape/mat_surf_gamg_basic_shape.tres" id="8_2tsol"]
+[ext_resource type="PackedScene" uid="uid://bv41ifw86fmhg" path="res://addons/2026_04_07_gdp_charleroi_xr_art_on_godot/stree_eloi/assets/3d/surfing_drone/board/surf_board.glb" id="9_p3ewe"]
+[ext_resource type="Material" uid="uid://dqn6vwhj2s3gq" path="res://addons/2026_04_07_gdp_charleroi_xr_art_on_godot/stree_eloi/assets/3d/surfing_drone/board/mat_surf_board.tres" id="10_2v474"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ils87"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2jrdl"]
+
+[node name="DemoMainStreeEloi" type="Node3D" unique_id=1575648132]
+
+[node name="HumanSize1x2x1" type="MeshInstance3D" parent="." unique_id=41310314]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1, -3.6917238)
+visible = false
+mesh = SubResource("BoxMesh_ils87")
+
+[node name="surfer_rigged" parent="." unique_id=273400802 instance=ExtResource("1_nl8te")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, -0.03730035, -1.7788575)
+
+[node name="Head" parent="surfer_rigged/SurfingDroneHuman/Skeleton3D/head" parent_id_path=PackedInt32Array(273400802, 629077297) index="0" unique_id=1605319832]
+surface_material_override/0 = ExtResource("2_ils87")
+
+[node name="HandLeft" parent="surfer_rigged/SurfingDroneHuman/Skeleton3D/forearm_L_001" parent_id_path=PackedInt32Array(273400802, 168816198) index="0" unique_id=2006582078]
+surface_material_override/0 = ExtResource("2_ils87")
+
+[node name="ForearmLeft" parent="surfer_rigged/SurfingDroneHuman/Skeleton3D/forearm_L" parent_id_path=PackedInt32Array(273400802, 66422256) index="0" unique_id=223863728]
+surface_material_override/0 = ExtResource("2_ils87")
+
+[node name="ArmLeft" parent="surfer_rigged/SurfingDroneHuman/Skeleton3D/upper_arm_L" parent_id_path=PackedInt32Array(273400802, 780064394) index="0" unique_id=520522232]
+surface_material_override/0 = ExtResource("2_ils87")
+
+[node name="HandRight" parent="surfer_rigged/SurfingDroneHuman/Skeleton3D/forearm_R_001" parent_id_path=PackedInt32Array(273400802, 1265469169) index="0" unique_id=1742745551]
+surface_material_override/0 = ExtResource("2_ils87")
+
+[node name="ForearmRight" parent="surfer_rigged/SurfingDroneHuman/Skeleton3D/forearm_R" parent_id_path=PackedInt32Array(273400802, 1974798949) index="0" unique_id=955941424]
+surface_material_override/0 = ExtResource("2_ils87")
+
+[node name="ArmRight" parent="surfer_rigged/SurfingDroneHuman/Skeleton3D/upper_arm_R" parent_id_path=PackedInt32Array(273400802, 1586054729) index="0" unique_id=1062916210]
+surface_material_override/0 = ExtResource("2_ils87")
+
+[node name="FootLeft" parent="surfer_rigged/SurfingDroneHuman/Skeleton3D/foot_L" parent_id_path=PackedInt32Array(273400802, 419739043) index="0" unique_id=1551557302]
+surface_material_override/0 = ExtResource("2_ils87")
+
+[node name="ShinLeft" parent="surfer_rigged/SurfingDroneHuman/Skeleton3D/shin_L" parent_id_path=PackedInt32Array(273400802, 1612445838) index="0" unique_id=913782164]
+surface_material_override/0 = ExtResource("2_ils87")
+
+[node name="TightLeft" parent="surfer_rigged/SurfingDroneHuman/Skeleton3D/thigh_L" parent_id_path=PackedInt32Array(273400802, 1336785156) index="0" unique_id=1123746414]
+surface_material_override/0 = ExtResource("2_ils87")
+
+[node name="FootRight" parent="surfer_rigged/SurfingDroneHuman/Skeleton3D/foot_R" parent_id_path=PackedInt32Array(273400802, 2075851274) index="0" unique_id=1080906172]
+surface_material_override/0 = ExtResource("2_ils87")
+
+[node name="ShinRight" parent="surfer_rigged/SurfingDroneHuman/Skeleton3D/shin_R" parent_id_path=PackedInt32Array(273400802, 23389816) index="0" unique_id=10293324]
+surface_material_override/0 = ExtResource("2_ils87")
+
+[node name="ThighRight" parent="surfer_rigged/SurfingDroneHuman/Skeleton3D/thigh_R" parent_id_path=PackedInt32Array(273400802, 1710246150) index="0" unique_id=43338472]
+surface_material_override/0 = ExtResource("2_ils87")
+
+[node name="Body" parent="surfer_rigged/SurfingDroneHuman/Skeleton3D" parent_id_path=PackedInt32Array(273400802, 111012895) index="13" unique_id=695023497]
+surface_material_override/0 = ExtResource("2_ils87")
+
+[node name="SurfingMeca" parent="." unique_id=951912415 instance=ExtResource("3_nmbls")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7440267, 0, 0)
+
+[node name="RightFoot" parent="SurfingMeca" index="0" unique_id=299247191]
+surface_material_override/0 = ExtResource("4_t53jj")
+
+[node name="RightFootFinderMiddle" parent="SurfingMeca" index="1" unique_id=778450509]
+surface_material_override/0 = ExtResource("4_t53jj")
+
+[node name="RightFootFinderOutter" parent="SurfingMeca" index="2" unique_id=1812037722]
+surface_material_override/0 = ExtResource("4_t53jj")
+
+[node name="RightFootFinderInner" parent="SurfingMeca" index="3" unique_id=1735448628]
+surface_material_override/0 = ExtResource("4_t53jj")
+
+[node name="RightDownLeg" parent="SurfingMeca" index="4" unique_id=1868017904]
+surface_material_override/0 = ExtResource("4_t53jj")
+
+[node name="LeftTopLeg" parent="SurfingMeca" index="5" unique_id=39953716]
+surface_material_override/0 = ExtResource("4_t53jj")
+
+[node name="RightUpLeg" parent="SurfingMeca" index="6" unique_id=279933993]
+surface_material_override/0 = ExtResource("4_t53jj")
+
+[node name="LeftDownLeg" parent="SurfingMeca" index="7" unique_id=1301022728]
+surface_material_override/0 = ExtResource("4_t53jj")
+
+[node name="LeftFootFinderOutter" parent="SurfingMeca" index="8" unique_id=965532606]
+surface_material_override/0 = ExtResource("4_t53jj")
+
+[node name="LeftFootFinderInner" parent="SurfingMeca" index="9" unique_id=1157246242]
+surface_material_override/0 = ExtResource("4_t53jj")
+
+[node name="LeftFootFinderMiddle" parent="SurfingMeca" index="10" unique_id=1632606523]
+surface_material_override/0 = ExtResource("4_t53jj")
+
+[node name="LeftFoot" parent="SurfingMeca" index="11" unique_id=2071926027]
+surface_material_override/0 = ExtResource("4_t53jj")
+
+[node name="Cockpit" parent="SurfingMeca" index="12" unique_id=2000649112]
+material_override = ExtResource("4_t53jj")
+surface_material_override/0 = SubResource("StandardMaterial3D_2jrdl")
+
+[node name="surf_drone" parent="." unique_id=2035195531 instance=ExtResource("5_2jrdl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0707903, 1.0127344, 3.391077)
+
+[node name="DronesNormal" parent="surf_drone" index="0" unique_id=1758688100]
+surface_material_override/0 = ExtResource("6_38wo7")
+
+[node name="DronePropeller" parent="surf_drone" index="1" unique_id=2142581314]
+surface_material_override/0 = ExtResource("6_38wo7")
+
+[node name="surf_drone2" parent="." unique_id=1458674471 instance=ExtResource("5_2jrdl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9212134, 1.0127344, 3.391077)
+
+[node name="DronesNormal" parent="surf_drone2" index="0" unique_id=1758688100]
+surface_material_override/0 = ExtResource("6_38wo7")
+
+[node name="DronePropeller" parent="surf_drone2" index="1" unique_id=2142581314]
+surface_material_override/0 = ExtResource("6_38wo7")
+
+[node name="surfing_game_basic_shape" parent="." unique_id=455731962 instance=ExtResource("7_vuwrv")]
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, -1.9707979, 0.80085313, 0)
+
+[node name="Shape_Crystal" parent="surfing_game_basic_shape" index="0" unique_id=743266121]
+transform = Transform3D(1, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0)
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_PyramideFlip" parent="surfing_game_basic_shape" index="1" unique_id=539762794]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_CubeFlip" parent="surfing_game_basic_shape" index="2" unique_id=937053331]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_LittleFaceFlip" parent="surfing_game_basic_shape" index="3" unique_id=972850956]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_LosangeFlip" parent="surfing_game_basic_shape" index="4" unique_id=250066161]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_EquiTriangleFlip" parent="surfing_game_basic_shape" index="5" unique_id=1226255142]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_CrystalFlip" parent="surfing_game_basic_shape" index="6" unique_id=1935956425]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_RocketFlip" parent="surfing_game_basic_shape" index="7" unique_id=224872280]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_IcosphereFlip" parent="surfing_game_basic_shape" index="8" unique_id=1558612455]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_DisqueBulletFlip" parent="surfing_game_basic_shape" index="9" unique_id=866716668]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_DisqueBullet" parent="surfing_game_basic_shape" index="10" unique_id=528112534]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_Icosphere" parent="surfing_game_basic_shape" index="11" unique_id=1458576681]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_Rocket" parent="surfing_game_basic_shape" index="12" unique_id=1295238904]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_EquiTriangle" parent="surfing_game_basic_shape" index="13" unique_id=437277056]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_Losange" parent="surfing_game_basic_shape" index="14" unique_id=1135079995]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_LittleFace" parent="surfing_game_basic_shape" index="15" unique_id=1572925543]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_Cube" parent="surfing_game_basic_shape" index="16" unique_id=1340206614]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="Shape_Pyramide" parent="surfing_game_basic_shape" index="17" unique_id=754814812]
+surface_material_override/0 = ExtResource("8_2tsol")
+
+[node name="surf_board" parent="." unique_id=651359189 instance=ExtResource("9_p3ewe")]
+transform = Transform3D(0.44, 0, 0, 0, 0.44, 0, 0, 0, 0.44, 0, 0, 0)
+
+[node name="Surfboard" parent="surf_board" index="0" unique_id=1102815261]
+surface_material_override/0 = ExtResource("10_2v474")
+
+[editable path="surfer_rigged"]
+[editable path="SurfingMeca"]
+[editable path="surf_drone"]
+[editable path="surf_drone2"]
+[editable path="surfing_game_basic_shape"]
+[editable path="surf_board"]
